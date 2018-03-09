@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<link href="stylesheet.css" rel="stylesheet" type="text/css" /> -->
+  <style>
+.btn.btn-info{
+	outline:none;
+	border-radius:55%;
+	height:22vh;
+	width:10%;
+	float:left;
+	margin-left:2%;
+	
+} 
+ </style>
+</head>
+<body>
+<div>
+<h2>Your Accounts</h2>
+<br>
+
+  <script>
+		var len =10;
+		var j=0;
+		var z=0;
+		var button ="";
+		var yes="yes";
+		
+		for (var i=1; i < len;i++ ) {
+		   
+			button+='<button type="button"   id="clickbtn' +i+'"	  class="btn btn-info"  data-toggle="collapse" data-target="#demo' + i + '">#account' + i + '</button><div id="demo' + i + '"  class="collapse"><form class="form-horizontal" ><div class="form-group"><br><br><br><br><br><br><br><br><br><br><br><br><label class="control-label col-sm-2" >Account No:</label><div class="col-sm-10"><p class="form-control-static">#accountno' + i + '</p> </div></div><div class="form-group" class="collapse"><label class="control-label col-sm-2" >Balance:</label><div class="col-sm-10"><p class="form-control-static">#balance' + i + '</p></div></div></form><div class="table-responsive"> <table class="table"><thead><tr><th>#</th><th>Transaction ID</th><th>Transaction Date</th><th>Amount</th></tr></thead><tbody><tr><td>1</td><td>#transid1</td><td>#transdate1</td><td>#amount1</td></tr><tr><td>2</td><td>#transid2</td><td>#transdate2</td><td>#amount2</td></tr></tbody></table></div></div></div>'
+			}
+			document.write(button);
+			
+		 setInterval(fun,5000);
+			function fun(){
+			setTimeout(fun1,1000);
+			setTimeout(fun2,3000);
+			function fun1()
+			{ 	j++;
+				var clickbutton1= "clickbtn" +j;
+				document.getElementById(clickbutton1).style.backgroundColor="#4cae4c";
+				document.getElementById(clickbutton1).click();
+				
+			}
+			function fun2()
+			{ 	z++;
+				var clickbutton2= "clickbtn" +z;
+				document.getElementById(clickbutton2).style.backgroundColor="#066105";
+				document.getElementById(clickbutton2).click();
+				
+			}
+		 }
+		
+	 </script>
+		
+</div>
+</body>
+</html>
